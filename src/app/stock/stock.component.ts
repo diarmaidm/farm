@@ -9,9 +9,9 @@ export class StockComponent implements OnInit {
 
   constructor() { }
 
+  stock = 'Charolais';
+
   ngOnInit() {
   }
-
-  stock = 'Charolais';
 
 }
