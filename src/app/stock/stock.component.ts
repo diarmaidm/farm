@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Stock } from '../stock';
 
 @Component({
   selector: 'app-stock',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StockComponent implements OnInit {
 
-  constructor() { }
+  stock: Stock = {
+    id: 1,
+    name: 'Charolais'
+  };
 
-  stock = 'Charolais';
+  constructor() { }
 
   ngOnInit() {
   }
