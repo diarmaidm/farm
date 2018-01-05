@@ -1,6 +1,59 @@
 <h2>
   {{ stock.name | uppercase }} Details
+  <div>
+    <label>Obtained:
+      <input [(ngModel)]="stock.obtainedhow" placeholder="Breed or Bought">
+    </label>
+  </div>
+  <div>
+    <label>Date Obtained:
+      <input [(ngModel)]="stock.obtainedwhen" placeholder="Date Born or Bought">
+    </label>
+  </div>
+  <div>
+    <label>Breed:
+      <input [(ngModel)]="stock.breed" placeholder="Breed">
+    </label>
+  </div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="stock.name" placeholder="Name">
+    </label>
+  </div>
+  <div>
+    <label>Sex:
+      <input [(ngModel)]="stock.sex" placeholder="Sex">
+    </label>
+  </div>
+  <div>
+    <label>Tag:
+      <input [(ngModel)]="stock.tag" placeholder="Tag">
+    </label>
+  </div>
+  <div>
+    <label>Tattoo:
+      <input [(ngModel)]="stock.tattoo" placeholder="Tattoo">
+    </label>
+  </div>
+  <div>
+    <label>Estimated Value:
+      <input [(ngModel)]="stock.value" placeholder="Value">
+    </label>
+  </div>
+  <div>
+    <label>Date Sold:
+      <input [(ngModel)]="stock.soldwhen" placeholder="Date Sold">
+    </label>
+  </div>
+  <div>
+    <label>Other Details:
+      <input [(ngModel)]="stock.otherdetails" placeholder="Other Information">
+    </label>
+  </div>
+  <div>
+    <label>Dam Tag:
+      <input [(ngModel)]="stock.damtag" placeholder="Dam Tag">
+    </label>
+  </div>
 </h2>
-<div><span>id: </span>{{stock.id}}</div>
-<div><span>name: </span>{{stock.name}}</div>
 
