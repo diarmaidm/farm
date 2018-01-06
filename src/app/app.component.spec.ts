@@ -1,12 +1,11 @@
 import { TestBed, async } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { StockComponent } from './stock/stock.component';
 
 describe('AppComponent', () => {
   const appName = 'Farm App';
-  
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
