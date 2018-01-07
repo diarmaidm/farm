@@ -10,20 +10,26 @@ import { STOCKES } from '../mock-stockes';
 export class StockComponent implements OnInit {
 
   stockes = STOCKES;
-  stock: Stock = {
-    id: 1,
-    obtainedhow: 'Bought',
-    obtainedwhen: '01/01/2015',
-    breed: 'Charolais',
-    name: 'Jane',
-    sex: 'Female',
-    tag: 'A1-B2',
-    tattoo: 'CC',
-    value: null,
-    soldwhen: null,
-    otherdetails: null,
-    damtag: null
-  };
+  // stock: Stock = {
+  //   id: 1,
+  //   obtainedhow: 'Bought',
+  //   obtainedwhen: '01/01/2015',
+  //   breed: 'Charolais',
+  //   name: 'Jane',
+  //   sex: 'Female',
+  //   tag: 'A1-B2',
+  //   tattoo: 'CC',
+  //   value: null,
+  //   soldwhen: null,
+  //   otherdetails: null,
+  //   damtag: null
+  // };
+
+  selectedStock: Stock;
+
+  onSelect(stock: Stock): void {
+    this.selectedStock = stock;
+  }
 
   constructor() {
   }

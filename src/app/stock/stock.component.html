@@ -1,65 +1,69 @@
 <h2>My Stock</h2>
 <ul class="stock">
-  <li *ngFor="let stock of stockes">
-    <span class="badge">{{stock.id}}</span> {{stock.name}}
+  <li *ngFor="let stock of stockes"
+    (click)="onSelect(stock)"
+    [class.selected]="stock === selectedStock">
+      <span class="badge">{{stock.id}}</span> {{stock.name}}
   </li>
 </ul>
 
-<h2>
-  {{ stock.name | uppercase }} Details
-  <div>
-    <label>Obtained:
-      <input [(ngModel)]="stock.obtainedhow" placeholder="Breed or Bought">
-    </label>
-  </div>
-  <div>
-    <label>Date Obtained:
-      <input [(ngModel)]="stock.obtainedwhen" placeholder="Date Born or Bought">
-    </label>
-  </div>
-  <div>
-    <label>Breed:
-      <input [(ngModel)]="stock.breed" placeholder="Breed">
-    </label>
-  </div>
-  <div>
-    <label>Name:
-      <input [(ngModel)]="stock.name" placeholder="Name">
-    </label>
-  </div>
-  <div>
-    <label>Sex:
-      <input [(ngModel)]="stock.sex" placeholder="Sex">
-    </label>
-  </div>
-  <div>
-    <label>Tag:
-      <input [(ngModel)]="stock.tag" placeholder="Tag">
-    </label>
-  </div>
-  <div>
-    <label>Tattoo:
-      <input [(ngModel)]="stock.tattoo" placeholder="Tattoo">
-    </label>
-  </div>
-  <div>
-    <label>Estimated Value:
-      <input [(ngModel)]="stock.value" placeholder="Value">
-    </label>
-  </div>
-  <div>
-    <label>Date Sold:
-      <input [(ngModel)]="stock.soldwhen" placeholder="Date Sold">
-    </label>
-  </div>
-  <div>
-    <label>Other Details:
-      <input [(ngModel)]="stock.otherdetails" placeholder="Other Information">
-    </label>
-  </div>
-  <div>
-    <label>Dam Tag:
-      <input [(ngModel)]="stock.damtag" placeholder="Dam Tag">
-    </label>
-  </div>
-</h2>
+<div *ngIf="selectedStock">
+  <h2>
+    {{ selectedStock.name | uppercase }} Details
+    <div>
+      <label>Obtained:
+        <input [(ngModel)]="selectedStock.obtainedhow" placeholder="Breed or Bought">
+      </label>
+    </div>
+    <div>
+      <label>Date Obtained:
+        <input [(ngModel)]="selectedStock.obtainedwhen" placeholder="Date Born or Bought">
+      </label>
+    </div>
+    <div>
+      <label>Breed:
+        <input [(ngModel)]="selectedStock.breed" placeholder="Breed">
+      </label>
+    </div>
+    <div>
+      <label>Name:
+        <input [(ngModel)]="selectedStock.name" placeholder="Name">
+      </label>
+    </div>
+    <div>
+      <label>Sex:
+        <input [(ngModel)]="selectedStock.sex" placeholder="Sex">
+      </label>
+    </div>
+    <div>
+      <label>Tag:
+        <input [(ngModel)]="selectedStock.tag" placeholder="Tag">
+      </label>
+    </div>
+    <div>
+      <label>Tattoo:
+        <input [(ngModel)]="selectedStock.tattoo" placeholder="Tattoo">
+      </label>
+    </div>
+    <div>
+      <label>Estimated Value:
+        <input [(ngModel)]="selectedStock.value" placeholder="Value">
+      </label>
+    </div>
+    <div>
+      <label>Date Sold:
+        <input [(ngModel)]="selectedStock.soldwhen" placeholder="Date Sold">
+      </label>
+    </div>
+    <div>
+      <label>Other Details:
+        <input [(ngModel)]="selectedStock.otherdetails" placeholder="Other Information">
+      </label>
+    </div>
+    <div>
+      <label>Dam Tag:
+        <input [(ngModel)]="selectedStock.damtag" placeholder="Dam Tag">
+      </label>
+    </div>
+  </h2>
+</div>
