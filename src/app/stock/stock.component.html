@@ -1,3 +1,10 @@
+<h2>My Stock</h2>
+<ul class="stock">
+  <li *ngFor="let stock of stockes">
+    <span class="badge">{{stock.id}}</span> {{stock.name}}
+  </li>
+</ul>
+
 <h2>
   {{ stock.name | uppercase }} Details
   <div>
@@ -56,4 +63,3 @@
     </label>
   </div>
 </h2>
-

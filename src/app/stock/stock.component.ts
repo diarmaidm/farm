@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Stock } from '../stock';
+import { STOCKES } from '../mock-stockes';
 
 @Component({
   selector: 'app-stock',
@@ -8,6 +9,7 @@ import { Stock } from '../stock';
 })
 export class StockComponent implements OnInit {
 
+  stockes = STOCKES;
   stock: Stock = {
     id: 1,
     obtainedhow: 'Bought',
@@ -23,7 +25,8 @@ export class StockComponent implements OnInit {
     damtag: null
   };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
