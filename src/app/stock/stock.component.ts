@@ -13,6 +13,7 @@ export class StockComponent implements OnInit {
 
   selectedStock: Stock;
 
+  // TODO: How do I test/TDD this?
   onSelect(stock: Stock): void {
     this.selectedStock = stock;
   }
